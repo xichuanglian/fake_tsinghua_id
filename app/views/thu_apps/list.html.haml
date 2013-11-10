@@ -1,0 +1,27 @@
+- if flash[:notice]
+  = flash[:notice]
+
+%table{border: 1}
+  %tbody
+    %tr
+      %th
+        Name
+      %th
+        Seq
+      %th
+        Prefix
+      %th
+        Default Path
+    - @apps.each do |app|
+      %tr
+        %td
+          = app.name
+        %td
+          = app.seq
+        %td
+          = app.prefix
+        %td
+          = app.default_path
+
+= link_to 'New App', '/app/new'
+

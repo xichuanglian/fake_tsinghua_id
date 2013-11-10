@@ -1,0 +1,30 @@
+- if flash[:notice]
+  = flash[:notice]
+
+= form_tag '/app/update', method: 'post' do
+  %p
+    = label :app, :appid
+    = text_field :app, :appid
+
+  %p
+    = label :app, :name
+    = text_field :app, :name
+
+  %p
+    = label :app, :seq
+    = number_field :app, :seq, value: 0
+
+  %p
+    = label :app, :prefix
+    = text_field :app, :prefix
+
+  %p
+    = label :app, :default_path
+    = text_field :app, :default_path
+
+  %p
+    = label_tag :secret
+    = password_field_tag :secret
+
+  %p
+    = submit_tag "Submit"

@@ -57,4 +57,7 @@ FakeTsinghuaId::Application.routes.draw do
   get '/login/form/:md5/:seq/:redirect_path' => 'users#login_form'
   post '/login' => 'users#login'
   get '/checkticket/:appid/:ticket/:user_ip' => 'users#check_ticket'
+  get '/app/list' => 'thu_apps#list'
+  get '/app/new' => 'thu_apps#new'
+  post '/app/update' => 'thu_apps#update'
 end
