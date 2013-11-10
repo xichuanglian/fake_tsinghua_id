@@ -11,6 +11,6 @@ class User < ActiveRecord::Base
   end
 
   def render_text
-    "zjh=#{self.thuid}:yhm=#{self.username}:xm=#{self.real_name}:yhlb=#{self.user_type}:dw=#{self.department}:email=#{self.email}"
+    "zjh#{self.thuid}:yhm=#{self.username}:xm=#{self.real_name}:yhlb=#{self.user_type}:dw=#{self.department}:email=#{self.email}"
   end
 end
