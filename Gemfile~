@@ -35,7 +35,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gruop :development, :test do
+group :development, :test do
   gem 'cucumber-rails', require: false
   gem 'rspec-rails'
   # Use sqlite3 as the database for Active Record
