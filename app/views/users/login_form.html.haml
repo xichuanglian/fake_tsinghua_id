@@ -1,0 +1,17 @@
+%p
+  Application: #{@app_name}
+- if flash[:notice]
+  %p
+    = flash[:notice]
+
+= form_tag '/login', method: 'post' do
+  = hidden_field :app, :md5, value: @md5
+  = hidden_field :app, :seq, value: @seq
+  = hidden_field :app, :redirect_path, value: @redirect_path
+
+  = label :user, :username
+  = text_field :user, :username
+  = label :user, :password
+  = password_field :user, :password
+
+  = submit_tag 'Submit'
